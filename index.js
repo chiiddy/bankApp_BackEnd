@@ -13,10 +13,17 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cookieParser());
+// app.use(
+//   cors({
+//     origin: "https://magneto-banking-applications.onrender.com",
+//   })
+// );
+
+
 app.use(
-  cors({
-    origin: "https://magneto-banking-applications.onrender.com",
-  })
+cors({
+  origin: "https://animated-kelpie-0745f0.netlify.app",
+})
 );
 
 app.use("/api", router);
